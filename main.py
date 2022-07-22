@@ -1,4 +1,5 @@
 import sys
+from shape import *
 
 def process_commands(filename):
     with open(filename, "r") as file:
@@ -13,5 +14,9 @@ def process_commands(filename):
                 processed_commands.append((line[0], line[1].strip()))
     return processed_commands
 
-l = process_commands(sys.argv[1])
-print(l)
+def main():
+    h = ShapeDrawer("hello.png")
+    h.draw_oval()
+    return 0
+
+main()
