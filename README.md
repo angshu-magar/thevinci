@@ -1,5 +1,5 @@
 # thevinci
 Flowchart-creator
 
-#Setting up
+Setting up
 pip install -r requirements.txt
