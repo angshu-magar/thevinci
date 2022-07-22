@@ -15,8 +15,7 @@ def process_commands(filename):
     return processed_commands
 
 def main():
-    h = ShapeDrawer("hello.png")
-    h.draw_oval()
-    return 0
+    pass
 
-main()
+if __name__ == "__main__":
+    main()

@@ -8,8 +8,15 @@ class ShapeDrawer:
         self.fontsize = 12;
         self.font = ImageFont.truetype("./fonts/times.ttf", self.fontsize)
 
-    def draw_oval(self):
-        self.draw.ellipse((50,50,500,500), fill = None, outline = "black", width = 1)
-        self.img.save(self.img_name)
-        return 0
+    def draw_oval(self, text, coordinate):
+        self.draw.text(coordinate, text, font=self.font, anchor="mm")
+        bounding_coor = self.draw.textbbox(coordinate, text, font=self.font, anchor="mm")
+        bounding_coor = list(bounding_coor)
+        bounding_coor[0] -= 20
+        bounding_coor[1] -= 20
+        bounding_coor[2] += 20
+        bounding_coor[3] += 20
+        self.draw.ellipse(bounding_coor, fill = None, outline = "black", width = 1)
 
+    def save(self):
+        self.img.save(self.img_name)
