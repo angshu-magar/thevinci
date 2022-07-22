@@ -1,0 +1,3 @@
+START:
+IO: Input a
+STOP:
