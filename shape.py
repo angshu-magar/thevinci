@@ -54,8 +54,60 @@ class ShapeDrawer:
         ) + 20
         self.draw.regular_polygon((coordinate, radius_bounding_circle), 4, 45, fill = None, outline = "black")
 
-    # def draw_line(self, coordinate):
-    #     self.draw.line(coordinate, fill = "black")
+    def draw_line(self, text, coordinate):
+        self.draw.line(coordinate, fill = "black")
+        coor_len = len(coordinate)
+        arrow_length = 8
+        if ((coordinate[coor_len - 1] == coordinate[coor_len - 3]) and (coordinate[coor_len - 2] > coordinate[coor_len - 4])):
+            self.draw.line(coordinate, fill = "black")
+            self.draw.line(
+                [
+                    ((coordinate[coor_len - 2] - arrow_length), (coordinate[coor_len - 1] - arrow_length)),
+                    ((coordinate[coor_len - 2]), (coordinate[coor_len - 1])),
+                    ((coordinate[coor_len - 2] - arrow_length), (coordinate[coor_len - 1] + arrow_length))
+                ], fill = "black"
+            )
+        elif ((coordinate[coor_len - 1] == coordinate[coor_len - 3]) and (coordinate[coor_len - 2] < coordinate[coor_len - 4])):
+            self.draw.line(coordinate, fill = "black")
+            self.draw.line(
+                [
+                    ((coordinate[coor_len - 2] + arrow_length), (coordinate[coor_len - 1] - arrow_length)),
+                    ((coordinate[coor_len - 2]), (coordinate[coor_len - 1])),
+                    ((coordinate[coor_len - 2] + arrow_length), (coordinate[coor_len - 1] + arrow_length))
+                ], fill = "black"
+            )
+        elif ((coordinate[coor_len - 2] == coordinate[coor_len - 4]) and (coordinate[coor_len - 1] > coordinate[coor_len - 3])):
+            self.draw.line(coordinate, fill = "black")
+            self.draw.line(
+                [
+                    ((coordinate[coor_len - 2] - arrow_length), (coordinate[coor_len - 1] - arrow_length)),
+                    ((coordinate[coor_len - 2]), (coordinate[coor_len - 1])),
+                    ((coordinate[coor_len - 2] + arrow_length), (coordinate[coor_len - 1] - arrow_length))
+                ], fill = "black"
+            )
+        else:
+            self.draw.line(coordinate, fill = "black")
+            self.draw.line(
+                [
+                    ((coordinate[coor_len - 2] - arrow_length), (coordinate[coor_len - 1] + arrow_length)),
+                    ((coordinate[coor_len - 2]), (coordinate[coor_len - 1])),
+                    ((coordinate[coor_len - 2] + arrow_length), (coordinate[coor_len - 1] + arrow_length))
+                ], fill = "black"
+            )
+
+        if (coordinate[1] == coordinate[3]):
+            mid_point = ((coordinate[0]+coordinate[2] / 2), (coordinate[1]+coordinate[3] / 2))
+            anchor_point = list(mid_point)
+            anchor_point[1] -= 20
+            anchor_point = tuple(anchor_point)
+            self.draw.text(anchor_point, text, fill = "black", font=self.font, anchor="ms")
+
+        elif (coordinate[0] == coordinate[2]):
+            mid_point = ((coordinate[0]+coordinate[2] / 2), (coordinate[1]+coordinate[3] / 2))
+            anchor_point = list(mid_point)
+            anchor_point[0] += 20
+            anchor_point = tuple(anchor_point)
+            self.draw.text(anchor_point, text, fill = "black", font=self.font, anchor="lm")
 
     def save(self):
         self.img.save(self.img_name)
