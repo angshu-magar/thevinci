@@ -1,3 +1,8 @@
 START:
 IO: Input a
-STOP:
+DECIDE: If a < 0 
+IO: a is negative
+IO: a is postitive
+PROCESS: a = 100
+IO: Input shit
+END:
