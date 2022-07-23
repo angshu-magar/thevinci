@@ -35,6 +35,7 @@ def main():
             print(block[0])
             coordinate_arrray.append((img_size[0] / 2, 0.05 * img_size[1]))
             chart.draw_oval("START", coordinate_arrray[0])
+
         elif block[0].upper() == "IO":
             print(commands_array.index(block))
             if flag == 1:
@@ -51,6 +52,7 @@ def main():
             else:
                 print(block[0])
                 pass
+
         elif block[0].upper() == "DECIDE":
             print(commands_array.index(block))
             print(block[0])
@@ -72,10 +74,14 @@ def main():
                 pass
             else:
                 print(block[0])
+
+        elif block[0].upper() == "LOOP":
+            pass
+
         elif block[0].upper() == "END":
             print(commands_array.index(block))
             print(block[0])
-            pass
+
         else:
             print("There is some error in the command file")
             exit()
