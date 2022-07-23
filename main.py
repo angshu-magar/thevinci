@@ -24,6 +24,7 @@ def main():
     temp.draw_rectangle("a, b", (img_size[0] / 2, 0.15 * img_size[1]))
     temp.draw_parallelogram("INPUT a", (img_size[0] / 2, 0.25 * img_size[1]))
     temp.draw_diamond("IF a > 0", (img_size[0] / 2, 0.35 * img_size[1]))
+    temp.draw_line("YES", (100, 20, 100, 50, 200, 50, 200, 100))
     temp.save()
 
     pass

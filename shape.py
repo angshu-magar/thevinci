@@ -96,16 +96,16 @@ class ShapeDrawer:
             )
 
         if (coordinate[1] == coordinate[3]):
-            mid_point = ((coordinate[0]+coordinate[2] / 2), (coordinate[1]+coordinate[3] / 2))
+            mid_point = (((coordinate[0]+coordinate[2]) / 2), ((coordinate[1]+coordinate[3]) / 2))
             anchor_point = list(mid_point)
-            anchor_point[1] -= 20
+            anchor_point[1] -= 10
             anchor_point = tuple(anchor_point)
             self.draw.text(anchor_point, text, fill = "black", font=self.font, anchor="ms")
 
         elif (coordinate[0] == coordinate[2]):
-            mid_point = ((coordinate[0]+coordinate[2] / 2), (coordinate[1]+coordinate[3] / 2))
+            mid_point = (((coordinate[0]+coordinate[2]) / 2), ((coordinate[1]+coordinate[3]) / 2))
             anchor_point = list(mid_point)
-            anchor_point[0] += 20
+            anchor_point[0] += 10
             anchor_point = tuple(anchor_point)
             self.draw.text(anchor_point, text, fill = "black", font=self.font, anchor="lm")
 
