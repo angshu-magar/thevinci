@@ -6,7 +6,7 @@ class ShapeDrawer:
         self.img_name = img_name
         self.img = Image.new("RGB", img_size, color = "white")
         self.draw = ImageDraw.Draw(self.img)
-        self.fontsize = 12;
+        self.fontsize = 15;
         self.font = ImageFont.truetype("./fonts/times.ttf", self.fontsize)
 
     def draw_oval(self, text, coordinate):
@@ -54,7 +54,7 @@ class ShapeDrawer:
         ) + 20
         self.draw.regular_polygon((coordinate, radius_bounding_circle), 4, 45, fill = None, outline = "black")
 
-    def draw_line(self, text, coordinate):
+    def draw_line(self, coordinate, text=""):
         self.draw.line(coordinate, fill = "black")
         coor_len = len(coordinate)
         arrow_length = 8
@@ -108,6 +108,10 @@ class ShapeDrawer:
             anchor_point[0] += 10
             anchor_point = tuple(anchor_point)
             self.draw.text(anchor_point, text, fill = "black", font=self.font, anchor="lm")
+
+    def return_bounding_coor(self, text, coordinate):
+        bounding_coor = self.draw.textbbox(coordinate, text, font=self.font, anchor="mm")
+        return bounding_coor
 
     def save(self):
         self.img.save(self.img_name)
