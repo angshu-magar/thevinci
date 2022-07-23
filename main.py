@@ -1,5 +1,4 @@
-import sys
-from shape import *
+import sys, shape
 
 def process_commands(filename):
     with open(filename, "r") as file:
