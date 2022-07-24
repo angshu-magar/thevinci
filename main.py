@@ -14,7 +14,7 @@ def process_commands(filename):
     return processed_commands
 
 def main():
-    img_size = (794, 1123)
+    img_size = (1240, 1754)
     chart = shape.ShapeDrawer("flowchart.png", img_size)
     coordinate_array = list() #list to store every block coordinates
     base_coordinates = (img_size[0] / 2, 0.05 * img_size[1]) #Coordinates of start block
@@ -30,7 +30,7 @@ def main():
             prev_block = commands_array[commands_array.index(block)-1]
             prev_block_boun_coor = chart.return_bounding_coor(prev_block[1], coordinate_array[-1])
             radius = shape.math.sqrt((prev_block_boun_coor[2] - coordinate_array[-1][0]) ** 2 + (prev_block_boun_coor[3] - coordinate_array[-1][1]) ** 2) + 20
-            coordinate_array.append((coordinate_array[-1][0] - 100, coordinate_array[-1][1] + radius + 50))
+            coordinate_array.append((coordinate_array[-1][0] - 250, coordinate_array[-1][1] + radius + 50))
             c1 = chart.return_bounding_coor(block[1], coordinate_array[-1])[1] - 20
             chart.draw_line((coordinate_array[-2][0] - radius, coordinate_array[-2][1], coordinate_array[-1][0], coordinate_array[-2][1], coordinate_array[-1][0], c1),"yes")
         elif flag == 2:
@@ -38,7 +38,7 @@ def main():
             prev_block = commands_array[commands_array.index(block)-2]
             prev_block_boun_coor = chart.return_bounding_coor(prev_block[1], coordinate_array[-1])
             radius = shape.math.sqrt((prev_block_boun_coor[2] - coordinate_array[-1][0]) ** 2 + (prev_block_boun_coor[3] - coordinate_array[-1][1]) ** 2) + 20
-            coordinate_array.append((coordinate_array[-2][0] + 100, coordinate_array[-1][1]))
+            coordinate_array.append((coordinate_array[-2][0] + 250, coordinate_array[-1][1]))
             c1 = chart.return_bounding_coor(block[1], coordinate_array[-1])[1] - 20
             chart.draw_line((coordinate_array[-3][0] + radius, coordinate_array[-3][1], coordinate_array[-1][0], coordinate_array[-3][1], coordinate_array[-1][0], c1), "no")
         else:

@@ -6,7 +6,7 @@ class ShapeDrawer:
         self.img_name = img_name
         self.img = Image.new("RGB", img_size, color = "white")
         self.draw = ImageDraw.Draw(self.img)
-        self.fontsize = 15;
+        self.fontsize = 20;
         self.font = ImageFont.truetype("./fonts/times.ttf", self.fontsize)
 
     def draw_oval(self, text, coordinate):

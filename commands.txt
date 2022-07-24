@@ -1,4 +1,7 @@
 START:
 IO: Input a
-LOOP: If a > 0 : yes2
+DECIDE: Is a > 0
+IO: Print a is postive
+IO: Print a is negative
+IO: Print is this working
 END:
