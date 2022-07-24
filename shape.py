@@ -56,42 +56,37 @@ class ShapeDrawer:
 
     def draw_line(self, coordinate, text=""):
         self.draw.line(coordinate, fill = "black")
-        coor_len = len(coordinate)
         arrow_length = 8
-        if ((coordinate[coor_len - 1] == coordinate[coor_len - 3]) and (coordinate[coor_len - 2] > coordinate[coor_len - 4])):
-            self.draw.line(coordinate, fill = "black")
+        if ((coordinate[-1] == coordinate[-3]) and (coordinate[-2] > coordinate[-4])):
             self.draw.line(
                 [
-                    ((coordinate[coor_len - 2] - arrow_length), (coordinate[coor_len - 1] - arrow_length)),
-                    ((coordinate[coor_len - 2]), (coordinate[coor_len - 1])),
-                    ((coordinate[coor_len - 2] - arrow_length), (coordinate[coor_len - 1] + arrow_length))
+                    ((coordinate[-2] - arrow_length), (coordinate[-1] - arrow_length)),
+                    ((coordinate[-2]), (coordinate[-1])),
+                    ((coordinate[-2] - arrow_length), (coordinate[-1] + arrow_length))
                 ], fill = "black"
             )
-        elif ((coordinate[coor_len - 1] == coordinate[coor_len - 3]) and (coordinate[coor_len - 2] < coordinate[coor_len - 4])):
-            self.draw.line(coordinate, fill = "black")
+        elif ((coordinate[-1] == coordinate[-3]) and (coordinate[-2] < coordinate[-4])):
             self.draw.line(
                 [
-                    ((coordinate[coor_len - 2] + arrow_length), (coordinate[coor_len - 1] - arrow_length)),
-                    ((coordinate[coor_len - 2]), (coordinate[coor_len - 1])),
-                    ((coordinate[coor_len - 2] + arrow_length), (coordinate[coor_len - 1] + arrow_length))
+                    ((coordinate[-2] + arrow_length), (coordinate[-1] - arrow_length)),
+                    ((coordinate[-2]), (coordinate[-1])),
+                    ((coordinate[-2] + arrow_length), (coordinate[-1] + arrow_length))
                 ], fill = "black"
             )
-        elif ((coordinate[coor_len - 2] == coordinate[coor_len - 4]) and (coordinate[coor_len - 1] > coordinate[coor_len - 3])):
-            self.draw.line(coordinate, fill = "black")
+        elif ((coordinate[-2] == coordinate[-4]) and (coordinate[-1] > coordinate[-3])):
             self.draw.line(
                 [
-                    ((coordinate[coor_len - 2] - arrow_length), (coordinate[coor_len - 1] - arrow_length)),
-                    ((coordinate[coor_len - 2]), (coordinate[coor_len - 1])),
-                    ((coordinate[coor_len - 2] + arrow_length), (coordinate[coor_len - 1] - arrow_length))
+                    ((coordinate[-2] - arrow_length), (coordinate[-1] - arrow_length)),
+                    ((coordinate[-2]), (coordinate[-1])),
+                    ((coordinate[-2] + arrow_length), (coordinate[-1] - arrow_length))
                 ], fill = "black"
             )
         else:
-            self.draw.line(coordinate, fill = "black")
             self.draw.line(
                 [
-                    ((coordinate[coor_len - 2] - arrow_length), (coordinate[coor_len - 1] + arrow_length)),
-                    ((coordinate[coor_len - 2]), (coordinate[coor_len - 1])),
-                    ((coordinate[coor_len - 2] + arrow_length), (coordinate[coor_len - 1] + arrow_length))
+                    ((coordinate[-2] - arrow_length), (coordinate[-1] + arrow_length)),
+                    ((coordinate[-2]), (coordinate[-1])),
+                    ((coordinate[-2] + arrow_length), (coordinate[-1] + arrow_length))
                 ], fill = "black"
             )
 
