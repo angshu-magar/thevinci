@@ -1,5 +1,5 @@
 # thevinci
-> Creats flowchart from pseudocode
+> Creates flowchart from pseudocode
 
 ## Dependencies
 * [Git](https://git-scm.com/)
