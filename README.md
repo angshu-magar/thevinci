@@ -47,6 +47,7 @@ START:
 END:
 ```
 Creates two ovals with `START` and `END` text inside them.
+
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/examples/start%26end.png)
 
 ### Input/Output(Parallelogram):
@@ -56,6 +57,7 @@ IO: Input a
 IO: Input b
 ```
 Creates three parallelograms with `x = 0`, `Input a` and `Input b` text inside them.
+
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/examples/io.png)
 
 ### Process(Rectangle):
@@ -64,6 +66,7 @@ PROCESS: x = x + 1
 PROCESS: rem = a % b
 ```
 Creates two rectangles with `x = x + 1` and `rem = a % b` text inside them.
+
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/examples/process.png)
 
 ### Decision(Diamond):
@@ -73,6 +76,7 @@ IO: a is greater
 IO: b is greater
 ```
 Creates a diamond with `If a > b` text inside it and points an arrow as *yes* to next block and *no* points an arrow to the block after that.
+
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/examples/decision.png)
 
 ### Loop(Diamond that goes to another block when a condition is met):
@@ -80,6 +84,7 @@ Creates a diamond with `If a > b` text inside it and points an arrow as *yes* to
 LOOP: If b > a: yes 3
 ```
 Creates a diamond with `If b > a` text inside it and if the condition is *yes* the goes to block 3 and *no* goes to the next block
+
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/examples/loop.png)
 
 ## Limitation
