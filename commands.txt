@@ -1,6 +1,9 @@
 START:
 IO: Input a
-PROCESS: a is negative
+DECIDE: Hello
 IO: a is postitive
-IO: shit
+PROCESS: shit
+PROCESS:Hello
+DECIDE: Hello
+DECIDE: HEllo
 END:
