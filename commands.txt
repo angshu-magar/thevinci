@@ -1,7 +1,7 @@
 START:
-IO: Input a
-DECIDE: Is a > 0
-IO: Print a is postive
-IO: Print a is negative
+PROCESS: a = 0
+IO: Print Nepal
+PROCESS: a += 1
+LOOP: Is a > 10 : yes_2
 IO: Print is this working
 END:
