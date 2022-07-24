@@ -1,0 +1,3 @@
+IO: x = 0
+IO: Input a
+IO: Input b

@@ -1,5 +1,5 @@
 # thevinci
-> Creats flowchart using pseudo code
+> Creats flowchart from pseudocode
 
 ## Dependencies
 * [Git](https://git-scm.com/)
@@ -21,3 +21,47 @@ python3 main.py commands.txt
 #Output
 flowchart.png
 ```
+
+## How to make your own flowchart
+
+You can make your own flowchart by writing a pseudocode in a text file and passing the text file as an argument into main.py.
+
+For eg: `python3 main.py your_file.txt`
+
+## Syntax
+
+**Start/End(Oval):**
+```
+START:
+END:
+```
+Creates two ovals with `START` and `END` text inside them.
+
+**Input/Output(Parallelogram):**
+```
+IO: x = 0
+IO: Input a
+IO: Input b
+```
+Creates three parallelograms with `x = 0`, `Input a` and `Input b` text inside them.
+
+**Process(Rectangle):**
+```
+PROCESS: x = x + 1
+PROCESS: rem = a % b
+```
+Creates two rectangles with `x = x + 1` and `rem = a % b` text inside them.
+
+**Decision(Diamond):**
+```
+DECIDE: If a > b
+IO: a is greater
+IO: b is greater
+```
+Creates a diamond with `If a > b` text inside it and points an arrow as *yes* to next block and *no* points an arrow to the block after that.
+
+**Loop(Diamond that goes to another block when a condition is met):**
+```
+LOOP: If b > a: yes 3
+```
+Creates a diamond with `If b > a` text inside it and if the condition is *yes* the goes to block 3 and *no* goes to the next block
