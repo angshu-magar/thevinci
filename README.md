@@ -41,7 +41,7 @@ For eg: `python3 main.py your_file.txt`
 
 ## Syntax
 
-### Start/End(Oval):
+### 1. Start/End(Oval):
 ```
 START:
 END:
@@ -50,7 +50,7 @@ Creates two ovals with `START` and `END` text inside them.
 
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/examples/start%26end.png)
 
-### Input/Output(Parallelogram):
+### 2. Input/Output(Parallelogram):
 ```
 IO: x = 0
 IO: Input a
@@ -60,7 +60,7 @@ Creates three parallelograms with `x = 0`, `Input a` and `Input b` text inside t
 
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/examples/io.png)
 
-### Process(Rectangle):
+### 3. Process(Rectangle):
 ```
 PROCESS: x = x + 1
 PROCESS: rem = a % b
@@ -69,7 +69,7 @@ Creates two rectangles with `x = x + 1` and `rem = a % b` text inside them.
 
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/examples/process.png)
 
-### Decision(Diamond):
+### 4. Decision(Diamond):
 ```
 DECIDE: If a > b
 IO: a is greater
@@ -79,7 +79,7 @@ Creates a diamond with `If a > b` text inside it and points an arrow as *yes* to
 
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/examples/decision.png)
 
-### Loop(Diamond that goes to another block when a condition is met):
+### 5. Loop(Diamond that goes to a previous block when a condition is met):
 ```
 LOOP: If b > a: yes 3
 ```
@@ -89,6 +89,6 @@ Creates a diamond with `If b > a` text inside it and if the condition is *yes* t
 
 ## Limitation
 
-* Cannot create more than two branches for a block.
+* Cannot create more than two branches from a block.
 * Cannot enter multiline text.
 * Cannot create complex branching.
