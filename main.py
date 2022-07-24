@@ -22,7 +22,7 @@ def main():
     commands = sys.argv[1]
     commands_array = process_commands(commands)
     for block in commands_array:
-        #Coordinates calculation
+        #Coordinates calculation and drawing connectors
         if len(coordinate_array) == 0:
             coordinate_array.append(base_coordinates)
         elif flag == 1:
@@ -44,6 +44,11 @@ def main():
             else:
                 prev_block_boun_coor = chart.return_bounding_coor(prev_block[0], coordinate_array[-1])
             coordinate_array.append((base_coordinates[0], prev_block_boun_coor[3] + 20 + 50))
+            if block[0].upper() == "END":
+                new_block_top_coor = chart.return_bounding_coor(block[0], coordinate_array[-1])
+            else:
+                new_block_top_coor = chart.return_bounding_coor(block[1], coordinate_array[-1])
+            chart.draw_line((base_coordinates[0], prev_block_boun_coor[3] + 20 , base_coordinates[0], new_block_top_coor[1] - 20))
 
         if block[0].upper() == "START":
             chart.draw_oval("START", coordinate_array[0])
@@ -58,7 +63,6 @@ def main():
             coordinate_array[-1][1] += radius
             coordinate_array[-1] = tuple(coordinate_array[-1])
             chart.draw_diamond(block[1], coordinate_array[-1])
-            # chart.draw_line((coordinate_array[-2][0], c1[3] + 20, coordinate_array[-1][0], coordinate_array[-1][1] - radius))
             flag = 1
 
         elif block[0].upper() == "PROCESS":

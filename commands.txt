@@ -1,9 +1,9 @@
 START:
 IO: Input a
-DECIDE: Hello
 IO: a is postitive
 PROCESS: shit
 PROCESS:Hello
-DECIDE: Hello
-DECIDE: HEllo
+IO: Hello
+PROCESS: has
+PROCESS: new
 END:
