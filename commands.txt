@@ -1,9 +1,4 @@
 START:
 IO: Input a
-IO: a is postitive
-PROCESS: shit
-PROCESS:Hello
-IO: Hello
-PROCESS: has
-PROCESS: new
+LOOP: If a > 0 : yes2
 END:
