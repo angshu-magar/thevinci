@@ -25,10 +25,15 @@ flowchart.png
 ### Output
 ```
 START:
-IO: x = 10
-IO: Print Nepal
-PROCESS: x = x - 1
-LOOP: If x != 0: yes_3
+PROCESS: a = 2
+PROCESS: flag = 1
+IO: Input num
+DECIDE: Is num % a == 0
+IO: Print not prime, goto end
+PROCESS: flag =  1
+PROCESS: a = a + 1
+LOOP: Is a >= num: no_5
+IO: Print num is prime
 END:
 ```
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/flowchart.png)
