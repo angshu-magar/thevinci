@@ -2,5 +2,5 @@ START:
 IO: x = 10
 IO: Print Nepal
 PROCESS: x = x - 1
-LOOP: If x != 0: yes 3
+LOOP: If x != 0: yes_3
 END:

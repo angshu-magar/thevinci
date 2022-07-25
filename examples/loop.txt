@@ -2,5 +2,5 @@ START:
 IO: Input a
 IO: Input b
 PROCESS: a = a + 1
-LOOP: If a < b : yes 2
+LOOP: If a < b : yes_2
 END:

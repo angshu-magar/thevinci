@@ -28,7 +28,7 @@ START:
 IO: x = 10
 IO: Print Nepal
 PROCESS: x = x - 1
-LOOP: If x != 0: yes 3
+LOOP: If x != 0: yes_3
 END:
 ```
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/flowchart.png)
@@ -81,7 +81,7 @@ Creates a diamond with `If a > b` text inside it and points an arrow as *yes* to
 
 ### 5. Loop(Diamond that goes to a previous block when a condition is met):
 ```
-LOOP: If b > a: yes 3
+LOOP: If b > a: yes_3
 ```
 Creates a diamond with `If b > a` text inside it and if the condition is *yes* the goes to block 3 and *no* goes to the next block
 
