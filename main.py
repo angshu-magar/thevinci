@@ -66,14 +66,17 @@ def main():
                     new_block_top_coor = chart.return_bounding_coor(block[0], coordinate_array[-1])
                 else:
                     new_block_top_coor = chart.return_bounding_coor(block[1], coordinate_array[-1])
-                c2 = int(commands_array[commands_array.index(block)-1][2].split("_")[1]) - 1
-                c2_bound = chart.return_bounding_coor(commands_array[c2][1], coordinate_array[c2])
-                msg = commands_array[commands_array.index(block)-1][2].split("_")[0]
-                chart.draw_line((base_coordinates[0] + radius, coordinate_array[-2][1],
-                                 base_coordinates[0] + radius + 350, coordinate_array[-2][1],
-                                 base_coordinates[0] + radius + 350, coordinate_array[c2][1],
-                                 c2_bound[2] + 20, coordinate_array[c2][1]
-                                 ), msg)
+                c1 = commands_array[commands_array.index(block)-1][2].split("_")[1]
+                msg = ""
+                if int(c1) != 0:
+                    c2 = int(commands_array[commands_array.index(block)-1][2].split("_")[1]) - 1
+                    c2_bound = chart.return_bounding_coor(commands_array[c2][0], coordinate_array[c2])
+                    msg = commands_array[commands_array.index(block)-1][2].split("_")[0]
+                    chart.draw_line((base_coordinates[0] + radius, coordinate_array[-2][1],
+                                     base_coordinates[0] + radius + 350, coordinate_array[-2][1],
+                                     base_coordinates[0] + radius + 350, coordinate_array[c2][1],
+                                     c2_bound[2] + 20, coordinate_array[c2][1]
+                                     ), msg)
                 if msg == "yes":
                     msg = "no"
                 else:

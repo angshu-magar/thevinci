@@ -25,15 +25,15 @@ flowchart.png
 ### Output
 ```
 START:
-PROCESS: a = 2
-PROCESS: flag = 1
+IO: Print this is program to print numbers that can divide the input number
+PROCESS: a = 0
 IO: Input num
-DECIDE: Is num % a == 0
-IO: Print not prime, goto end
-PROCESS: flag =  1
 PROCESS: a = a + 1
+DECIDE: Is num % a == 0
+IO: Print a
+IO: Do nothing
+PROCESS: connector
 LOOP: Is a >= num: no_5
-IO: Print num is prime
 END:
 ```
 ![alt text](https://github.com/angshu-magar/thevinci/blob/main/flowchart.png)
